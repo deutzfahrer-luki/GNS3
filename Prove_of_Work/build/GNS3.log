@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.24)  24 NOV 2024 19:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.24)  13 DEC 2024 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -405,7 +405,7 @@ Overfull \hbox (21.95192pt too wide) in paragraph at lines 23--23
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 32.
 [3{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4] [5]
-<images/Wireshark_Ping_HUB.png, id=178, 1139.25626pt x 204.765pt>
+<images/Wireshark_Ping_HUB.png, id=188, 1139.25626pt x 204.765pt>
 File: images/Wireshark_Ping_HUB.png Graphic file (type png)
 <use images/Wireshark_Ping_HUB.png>
 Package pdftex.def Info: images/Wireshark_Ping_HUB.png  used on input line 124.
@@ -418,7 +418,7 @@ sse 00:50:79:66:68:00 (192.168.3.2)
  []
 
 [6 <./images/Wireshark_Ping_HUB.png>]
-<images/Wireshark_Ping_Switch.png, id=184, 925.4575pt x 43.16125pt>
+<images/Wireshark_Ping_Switch.png, id=194, 925.4575pt x 43.16125pt>
 File: images/Wireshark_Ping_Switch.png Graphic file (type png)
 <use images/Wireshark_Ping_Switch.png>
 Package pdftex.def Info: images/Wireshark_Ping_Switch.png  used on input line 1
@@ -441,13 +441,13 @@ Overfull \hbox (1.8587pt too wide) in paragraph at lines 216--216
 []\OT1/cmr/bx/n/14.4 Beschreibung und Begr^^?undung der IPv4-Konfiguration 
  []
 
-[9]
-Overfull \hbox (34.48743pt too wide) in paragraph at lines 254--255
+[9] [10]
+Overfull \hbox (34.48743pt too wide) in paragraph at lines 276--277
 \OT1/cmr/m/n/12 Wenn du einen Rech-ner aus deinem Heim-net-zw-erk (z.B. mit der
  IP-Adresse \OT1/cmtt/m/n/12 192.168.3.2\OT1/cmr/m/n/12 )
  []
 
-[10] [11] (build/GNS3.aux)
+[11] [12] [13] [14] (build/GNS3.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -457,27 +457,28 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `GNS3.out' has not changed.
-(rerunfilecheck)             Checksum: A41E8A6CAEC42DB29A5FA63FC73D2766;6680.
+(rerunfilecheck)             Checksum: 6295B3E3EA320FD9803260A06C5E4D43;7062.
  ) 
 Here is how much of TeX's memory you used:
- 10969 strings out of 474727
- 166843 string characters out of 5759115
- 1935975 words of memory out of 5000000
- 32921 multiletter control sequences out of 15000+600000
- 565378 words of font info for 62 fonts, out of 8000000 for 9000
+ 10977 strings out of 474727
+ 166943 string characters out of 5759115
+ 1936975 words of memory out of 5000000
+ 32924 multiletter control sequences out of 15000+600000
+ 565725 words of font info for 63 fonts, out of 8000000 for 9000
  891 hyphenation exceptions out of 8191
- 75i,7n,79p,468b,541s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,79p,468b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
-1200.pfb>
-Output written on build/GNS3.pdf (11 pages, 205835 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.p
+fb>
+Output written on build/GNS3.pdf (14 pages, 224920 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 243 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 PDF objects out of 1000 (max. 8388607)
+ 249 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -229,15 +229,37 @@ Um die IP-Adresse des Routers von \texttt{br-lan} auf \texttt{192.168.3.1/24} zu
 
 \begin{enumerate}
     \item Logge dich in OpenWrt ein.
-    \item Ändere die IP-Adresse des \texttt{br-lan} Interfaces:
+    \item Ändere die IP-Adresse des \texttt{br-lan} Interfaces mit:
+    \begin{itemize}
+    \item Öffne die Config Files des Netzwerk: (in der Router Konsole
     \begin{verbatim}
-    uci set network.lan.ipaddr='192.168.3.1'
-    uci set network.lan.netmask='255.255.255.0'
-    uci commit network
-    /etc/init.d/network restart
+vi /etc/config/network
     \end{verbatim}
-    \item Dies setzt die IP-Adresse des \texttt{br-lan} Interfaces auf \texttt{192.168.3.1} und konfiguriert die Subnetzmaske auf \texttt{255.255.255.0}.
+    \item Ändere die Config-File um folgende Zahlen um, die IP des Routers zu ändern, zwei weitere Ports freizuschalten und den router als Switch zu benutzen.
+        \begin{verbatim}
+config device
+        option name 'br-lan'
+        option type 'bridge'
+        list ports 'eth0'
+        list ports 'eth2'
+        list ports 'eth3'
+
+config interface 'lan'
+        option device 'br-lan'
+        option proto 'static'
+        option ipaddr '192.168.3.1'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+    \end{verbatim}
+    \item resatart und reload die jeweiligen Config-Files
+\begin{verbatim}
+/etc/init.d/network restart
+/etc/init.d/network reload
+\end{verbatim}
+    \end{itemize}
 \end{enumerate}
+
+\newpage
 
 \subsection{Was bedeutet \texttt{/24}?}
 
@@ -294,6 +316,78 @@ ping 192.168.3.1
 \end{verbatim}
 
 Wenn alles korrekt konfiguriert ist, sollte der Ping erfolgreich sein.
+
+\newpage
+
+\subsection{DHCP-Server Konfigurieren}
+\textbf{Aufgabenstellung:}\\
+\textit{Konfiguriere einen dhcpd für das interface lan sodass Adressen von 10..99 vergeben werdenu nd die leasetime 1h beträgt}
+
+\begin{itemize}
+\item Öffne die Config-Files mit folgenden Befehl:
+\begin{verbatim}
+vi /etc/config/dhcp
+\end{verbatim}
+\item Ändere folgende Zeilen in der Config-File:
+\begin{verbatim}
+config dhcp 'lan'
+        option interface 'lan'
+        option start '10'
+        option limit '99'
+        option leasetime '1h'
+        option dhcpv4 'server'
+        option dhcpv6 'server'
+        option ra 'server'
+        option ra_slaac '1'
+        list ra_flags 'managed-config'
+        list ra_flags 'other-config'
+\end{verbatim}
+\item resatart und reload die jeweiligen Config-Files
+\begin{verbatim}
+/etc/init.d/dnsmasq restart
+/etc/init.d/dnsmasq reload
+\end{verbatim}
+\end{itemize}
+
+\newpage
+
+\subsection{Configuration der Firewall}
+\textbf{Aufgabenstellung}\\
+\textit{Blockiere Zugang zum Netzwerk WAN für PC2 per ip}\\
+\textbf{Voraussetzung}\\
+DHCP-Server auf eine fixe IP über die MAC Adresse des PC2 fix zuweisen
+\begin{itemize}
+\item Öffne die DHCP-Config file, schreibe folgende Zeilen in die File und restart den service
+\begin{verbatim}
+config host
+        option name 'PC2'
+        option mac '00:50:79:66:68:01'
+        option ip '192.168.3.133'
+\end{verbatim}
+\end{itemize}
+\textbf{Firewall konfigurieren}
+\begin{itemize}
+\item öffne die Config files mit:
+\begin{verbatim}
+vi /etc/config/firewall
+\end{verbatim}
+\item schreibe folgende Zeilen rein:
+\begin{verbatim}
+config rule                                         
+        option name             Block PC2           
+        option proto            all                 
+        option src              lan                 
+        option dest             wan                 
+        option target           REJECT              
+        option src_ip           192.168.3.133  
+\end{verbatim}
+\item restart firewall
+\begin{verbatim}
+/etc/init.d/firewall restart
+/etc/init.d/firewall reload
+\end{verbatim}
+\end{itemize}
+
 
 
 \end{document}
