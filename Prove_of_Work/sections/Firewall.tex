@@ -1,0 +1,73 @@
+\section{Configuration der Firewall}
+\subsection{Blockierung eines PCs}
+\textit{\textbf{Aufgabenstellung:} Blockiere Zugang zum Netzwerk WAN für PC2 per ip}\\
+\textbf{Voraussetzung}\\
+DHCP-Server auf eine fixe IP über die MAC Adresse des PC2 fix zuweisen
+\begin{itemize}
+\item Öffne die DHCP-Config file, schreibe folgende Zeilen in die File und restart den service
+\begin{verbatim}
+config host
+        option name 				'PC2'
+        option mac 				'00:50:79:66:68:01'
+        option ip 				'192.168.3.133'
+\end{verbatim}
+\end{itemize}
+\textbf{Firewall konfigurieren}
+\begin{itemize}
+\item öffne die Config files mit:
+\begin{verbatim}
+vi /etc/config/firewall
+\end{verbatim}
+\item schreibe folgende Zeilen rein:
+\begin{verbatim}
+config rule                                         
+        option name             Block PC2           
+        option proto            all                 
+        option src              lan                 
+        option dest             wan                 
+        option target           REJECT              
+        option src_ip           192.168.3.133  
+\end{verbatim}
+\item restart firewall
+\begin{verbatim}
+/etc/init.d/firewall restart
+/etc/init.d/firewall reload
+\end{verbatim}
+\end{itemize}
+
+\newpage
+
+\subsection{Weiterleitung}
+\begin{itemize}
+\item Öffne die DHCP-Config file, schreibe folgende Zeilen in die File und restart den service \\ Dass die mac des Debian Server die fixe IP bekommt.
+\begin{verbatim}
+config host
+        option name 				'PC2'
+        option mac 				'00:50:79:66:68:01'
+        option ip 				'192.168.3.76'
+\end{verbatim}
+\end{itemize}
+\textbf{Firewall konfigurieren}
+\begin{itemize}
+\item öffne die Config files mit:
+\begin{verbatim}
+vi /etc/config/firewall
+\end{verbatim}
+\item schreibe folgende Zeilen rein:
+\begin{verbatim}
+config redirect                                        
+        option dest             'lan'              
+        option target           'DNAT'             
+        option name             'Transmission'         
+        option src              'wan'               
+        option dest_ip          '192.168.3.76'         
+        option dest_port        '80'                   
+        option src_dport        '80'               
+        option proto            'tcp'  
+\end{verbatim}
+\item restart firewall
+\begin{verbatim}
+/etc/init.d/firewall restart
+/etc/init.d/firewall reload
+\end{verbatim}
+\end{itemize}

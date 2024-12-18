@@ -1,0 +1,61 @@
+\section{DHCP Konfiguration}
+\subsection{Set IP Adresse}
+\textit{\textbf{Aufgabenstellung:} Stelle ein, dass Fix $x.x.x.10$ - $x.x.x.99$ IP-Adressen vergibt}
+
+\begin{itemize}
+\item Öffne die DHCP-Config file auf dem Router, schreibe folgende Zeilen in die File und restart den service
+\begin{verbatim}
+vi /etc/config/dhcp
+\end{verbatim}
+
+\item \textbf{Gateway setzen}
+\begin{verbatim}
+config dhcp 'lan'
+        option interface 'lan'
+        option start '10'		## Change
+        option limit '99'		## Change
+        option leasetime '1h'  	## Change
+        option dhcpv4 'server'
+        option dhcpv6 'server'
+        option ra 'server'
+        option ra_slaac '1'
+        list ra_flags 'managed-config'
+        list ra_flags 'other-config'
+\end{verbatim}
+
+\item \textbf{Netzwerk Neustarten}
+\begin{Huge} Frage TK \end{Huge}
+\begin{verbatim}
+/etc/init.d/network restart
+/etc/init.d/network reload
+\end{verbatim}
+\end{itemize}
+
+\newpage
+
+\subsection{Fix IP Adresse auf MAC Adresse}
+\textit{\textbf{Aufgabenstellung:} Stelle ein, dass eine fixe MAC-Adresse immer die gleiche IP zugewiesen bekommt}
+
+\begin{itemize}
+\item Öffne die DHCP-Config file auf dem Router, schreibe folgende Zeilen in die File und restart den service
+\begin{verbatim}
+vi /etc/config/dhcp
+\end{verbatim}
+
+\item \textbf{Gateway setzen}
+\begin{verbatim}
+## Add all
+config host
+        option name			'PC2'
+        option mac			'00:50:79:66:68:01'
+        option ip			'192.168.3.76'
+        option leasetime 	'infinite'
+\end{verbatim}
+
+\item \textbf{Netzwerk Neustarten}
+\begin{Huge} Frage TK \end{Huge}
+\begin{verbatim}
+/etc/init.d/network restart
+/etc/init.d/network reload
+\end{verbatim}
+\end{itemize}
