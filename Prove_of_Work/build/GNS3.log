@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.24)  19 DEC 2024 07:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.24)  19 DEC 2024 19:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -297,35 +297,44 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen167
 \Gm@dimlist=\toks24
 )
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip54
+\enit@outerparindent=\dimen168
+\enit@toks=\toks25
+\enit@inbox=\box55
+\enit@count@id=\count296
+\enitdp@description=\count297
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count296
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count298
+\l__pdf_internal_box=\box56
 )
 (build/GNS3.aux (build/Netzkonfig.aux) (build/DHCP.aux) (build/Firewall.aux)
-(build/Debian.aux))
+(build/Debian.aux) (build/SSH.aux))
 \openout1 = `GNS3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-\c@lstlisting=\count297
-Package hyperref Info: Link coloring OFF on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+\c@lstlisting=\count299
+Package hyperref Info: Link coloring OFF on input line 25.
  (build/GNS3.out) (build/GNS3.out)
 \@outlinefile=\write3
 \openout3 = `GNS3.out'.
@@ -333,17 +342,17 @@ Package hyperref Info: Link coloring OFF on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen168
-\scratchbox=\box56
-\nofMPsegments=\count299
-\nofMParguments=\count300
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen169
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count300
+\scratchdimen=\dimen169
+\scratchbox=\box57
+\nofMPsegments=\count301
+\nofMParguments=\count302
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen170
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
+\everyMPtoPDFconversion=\toks27
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -398,7 +407,7 @@ e
 \openout2 = `Netzkonfig.aux'.
 
  (./Netzkonfig.tex
-<images/GNS3/main1.png, id=87, 786.94pt x 233.87375pt>
+<images/GNS3/main1.png, id=97, 786.94pt x 233.87375pt>
 File: images/GNS3/main1.png Graphic file (type png)
 <use images/GNS3/main1.png>
 Package pdftex.def Info: images/GNS3/main1.png  used on input line 8.
@@ -410,7 +419,7 @@ n1.png>]
 \openout2 = `DHCP.aux'.
 
  (./DHCP.tex
-Overfull \hbox (7.28113pt too wide) in paragraph at lines 3--4
+Overfull \hbox (7.65494pt too wide) in paragraph at lines 3--4
 \OT1/cmr/bx/it/12 Aufgabenstellung: \OT1/cmr/m/it/12 Stelle ein, dass Fix $\OML
 /cmm/m/it/12 x:x:x:\OT1/cmr/m/n/12 10$ \OT1/cmr/m/it/12 - $\OML/cmm/m/it/12 x:x
 :x:\OT1/cmr/m/n/12 99$ \OT1/cmr/m/it/12 IP-Adressen vergibt 
@@ -435,29 +444,35 @@ Overfull \hbox (7.28113pt too wide) in paragraph at lines 3--4
 
 
 ] [9]
-<images/Aufbau.png, id=124, 1155.31625pt x 673.51625pt>
+<images/Aufbau.png, id=134, 1155.31625pt x 673.51625pt>
 File: images/Aufbau.png Graphic file (type png)
 <use images/Aufbau.png>
-Package pdftex.def Info: images/Aufbau.png  used on input line 65.
+Package pdftex.def Info: images/Aufbau.png  used on input line 71.
 (pdftex.def)             Requested size: 426.79135pt x 248.80658pt.
-) [10 <./images/Aufbau.png>] (build/GNS3.aux (build/Netzkonfig.aux) (build/DHCP
-.aux)
-(build/Firewall.aux) (build/Debian.aux))
+) [10 <./images/Aufbau.png>]
+\openout2 = `SSH.aux'.
+
+ (./SSH.tex [11
+
+
+
+]) [12] (build/GNS3.aux (build/Netzkonfig.aux)
+(build/DHCP.aux) (build/Firewall.aux) (build/Debian.aux) (build/SSH.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `GNS3.out' has not changed.
-(rerunfilecheck)             Checksum: EAD6B80A09B7762BA1A690462647052C;2361.
+(rerunfilecheck)             Checksum: 5263F9B9B883188A91544EAB09DF20EF;2579.
  ) 
 Here is how much of TeX's memory you used:
- 11034 strings out of 474727
- 168427 string characters out of 5759115
+ 11396 strings out of 474727
+ 174634 string characters out of 5759115
  1933975 words of memory out of 5000000
- 32976 multiletter control sequences out of 15000+600000
+ 33323 multiletter control sequences out of 15000+600000
  565873 words of font info for 63 fonts, out of 8000000 for 9000
  891 hyphenation exceptions out of 8191
- 75i,7n,79p,766b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,79p,766b,665s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
@@ -467,10 +482,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfrm1200.pfb>
-Output written on build/GNS3.pdf (10 pages, 211958 bytes).
+Output written on build/GNS3.pdf (12 pages, 216211 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

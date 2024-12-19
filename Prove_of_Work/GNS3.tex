@@ -4,11 +4,18 @@
 \usepackage{amsmath}
 \usepackage {graphicx}	
 \usepackage{geometry}	% Ermöglicht das ändern der Seitenränder
+\usepackage{enumitem}
 
 \geometry{
     left = 3cm,   % Left margin
     right = 3cm,  % Right margin
     bottom = 3.2cm  % Bottom margin
+}
+
+\setlist[itemize]{
+	itemsep = -3pt, 
+	topsep=0pt, 
+	left=18pt
 }
 
 \title{VPCS Konfigurationsanleitung in GNS3}
@@ -35,4 +42,10 @@
 \newpage
 
 \include{Debian.tex}
+
+\newpage
+
+\include{SSH.tex}
+
+
 \end{document}

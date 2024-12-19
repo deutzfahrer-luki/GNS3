@@ -1,0 +1,69 @@
+\section{SSH}
+\begin{itemize}
+	\item \textbf{Firewall entsprechend konfigurieren}
+	\begin{itemize}
+	\item öffne Firewall
+	\item füge folgenden Eintrag hinzu
+	\begin{verbatim}
+	## Add all
+	config rule                                            
+        option name 'Allow-SSH'                        
+        option src 'wan'                           
+        option dest_port '22'                      
+        option proto 'tcp'                             
+        option target 'ACCEPT'
+	\end{verbatim}	
+	\end{itemize}		
+	
+	\item \textbf{Über Passwort Zugriff und ssh Zugriff aktivieren}
+	\begin{itemize}
+	\item Öffne die config-file
+	\begin{verbatim}
+	vi /etc/config/dropbear
+	\end{verbatim}
+	
+	\item änder die ganze File auf: 
+	\begin{verbatim}
+	## Change all
+	config dropbear
+        option PasswordAuth 'on'
+        option PubkeyAuth 'on'
+        option RootPasswordAuth 'on'
+        option Port         '22'
+	\end{verbatim}
+	\end{itemize}
+	
+	\item \textbf{ssh-key hinzufügen}
+	\begin{itemize}
+	\item Voraussetzung eines ssh key auf dem Host Rechner
+	\begin{itemize}
+	\item Hinzufügen (wenn nicht vorhanden)
+	\begin{verbatim}
+	ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
+	\end{verbatim}
+	\end{itemize}	 
+	\item ssh key auf Router kopieren
+	\begin{verbatim}
+	ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.122.254
+	\end{verbatim}
+	\end{itemize}
+		\newpage 
+	\item \textbf{Über Passwort Zugriff deaktivieren, ssh Zugriff aktivieren lassen}
+	\begin{itemize}
+	\item Öffne die config-file
+	\begin{verbatim}
+	vi /etc/config/dropbear
+	\end{verbatim}
+	
+	\item änder die ganze File auf: 
+	\begin{verbatim}
+	## Change all
+	config dropbear
+        option PasswordAuth 'off' ## Change
+        option PubkeyAuth 'on'
+        option RootPasswordAuth 'off' ## Change
+        option Port         '22'
+	\end{verbatim}
+	\end{itemize}
+	\item \textbf{Neu anmelden}
+\end{itemize}

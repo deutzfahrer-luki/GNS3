@@ -11,4 +11,6 @@
 \contentsline {subsection}{\numberline {4.1}Allgemeine Sachen}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}DHCP}{8}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}lighttpd auf Debian installieren}{9}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Host Laptop auf Debian Server zugreifen}{10}{subsubsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.4}Config von lighttpd}{9}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Host Laptop auf Debian Server zugreifen}{10}{subsubsection.4.4.1}%
+\contentsline {section}{\numberline {5}SSH}{11}{section.5}%
